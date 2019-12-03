@@ -15,6 +15,7 @@ class JokeModel: NSObject {
     public var type: String!
     public var setup: String!
     public var delivery: String!
+    public var singleJoke: String!
     
     public init(details: [String: Any]) {
         super.init()
@@ -30,5 +31,6 @@ class JokeModel: NSObject {
         type = details["type"] as? String
         setup = details["setup"] as? String ?? ""
         delivery = details["delivery"] as? String ?? ""
+        singleJoke = details["joke"] as? String ?? ""
     }
 }

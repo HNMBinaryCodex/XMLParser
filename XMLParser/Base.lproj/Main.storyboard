@@ -16,14 +16,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jv-l8-gUm">
-                                <rect key="frame" x="158.5" y="282.5" width="97" height="30"/>
+                                <rect key="frame" x="158.5" y="328" width="97" height="30"/>
                                 <state key="normal" title="Tell me a joke!"/>
                                 <connections>
                                     <action selector="parseXml:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3k7-IC-TnX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oG-bD-1iy">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="N3H-QI-ndr">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No joke here!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oG-bD-1iy">
+                                <rect key="frame" x="50" y="466" width="314" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,15 +34,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8oG-bD-1iy" firstAttribute="top" secondItem="4Jv-l8-gUm" secondAttribute="bottom" constant="125" id="Cql-M3-PB6"/>
-                            <constraint firstItem="8oG-bD-1iy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HJM-2F-hZh"/>
+                            <constraint firstItem="8oG-bD-1iy" firstAttribute="top" secondItem="N3H-QI-ndr" secondAttribute="bottom" constant="8" id="5Tx-NA-boV"/>
+                            <constraint firstItem="N3H-QI-ndr" firstAttribute="top" secondItem="4Jv-l8-gUm" secondAttribute="bottom" constant="80" id="LpO-CV-q1l"/>
+                            <constraint firstItem="8oG-bD-1iy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="T0U-vY-JBf"/>
+                            <constraint firstItem="N3H-QI-ndr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dBe-jB-WVd"/>
                             <constraint firstItem="4Jv-l8-gUm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eLQ-gE-Tb9"/>
-                            <constraint firstItem="8oG-bD-1iy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sEe-y8-JVK"/>
+                            <constraint firstItem="N3H-QI-ndr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uew-Wz-5o4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8oG-bD-1iy" secondAttribute="trailing" constant="50" id="x7Z-aI-a6W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="jokeLbl" destination="8oG-bD-1iy" id="tD6-Wq-Yj1"/>
+                        <outlet property="loader" destination="N3H-QI-ndr" id="wks-6y-t4Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
